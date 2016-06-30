@@ -12,3 +12,15 @@ html, body {
     position: relative;
     clear: both;
 }
+.gameIcon{
+	border: 2px solid white;
+	float:right;
+}
+.gameIconCol{
+	width:100%;
+}
+.title{
+	font-weight:bold;
+	font-size:22px;
+	width:50%
+}

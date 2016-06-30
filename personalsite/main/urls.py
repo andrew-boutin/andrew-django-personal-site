@@ -6,6 +6,8 @@ app_name = 'main'
 urlpatterns = [
     # /
     url(r'^$', views.index, name='index'),
+    # /devprojects/
+    url(r'^devprojects/$', views.devprojects, name='devprojects'),
     # /pcbuild/
     url(r'^pcbuild/$', views.pcbuild, name='pcbuild'),
     # /gamedev/

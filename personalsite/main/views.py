@@ -21,3 +21,8 @@ def keyboard(request):
     """Page for keyboard custom build."""
     return render(request, 'main/keyboard.html')
 
+
+def devprojects(request):
+    """Page for development project information."""
+    return render(request, 'main/devprojects.html')
+

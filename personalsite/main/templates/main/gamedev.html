@@ -1,30 +1,21 @@
 {% extends 'base.html' %}
 
+{% load staticfiles %}
+
 {% block body_block %}
-<h1 class="pageHeading">Video Game Development</h1>
-				
-				</br>
-				<div class="well outerInfo">
-					<p>
-						One of my favorite hobbies is making video games.  I've worked on both individual games and group 
-						projects using a variety of technologies.  Lately I've been using the 
-						<a class="link" href="https://unity3d.com/">Unity Engine</a> 
-						for most of my projects.  Currently, I'm focusing on the Crazy Canal Tower Defense game listed below.  
-						Feel free to download any of the available games listed here.
-					</p>
-				</div>
-				</br>
-				
-				<!-- <a href="http://www.indiedb.com/company/miriscus" title="View Miriscus on Indie DB" target="_blank"><img src="http://button.indiedb.com/popularity/medium/groups/217.png" alt="Miriscus" /></a> -->
-				
-				<h2 class="pageHeading">Completed Projects</h2>
-				
-				<div class="panel panel-default">
+<h2><span class="label label-default">Video Game Development</span></h2>
+  One of my favorite hobbies is making video games. I've worked on both individual games and group 
+  projects using a variety of technologies. Lately I've been using the <a class="link" href="https://unity3d.com/">Unity Engine</a> 
+  for most of my projects. Currently, I'm focusing on the Crazy Canal Tower Defense game listed below. Feel free to download any of 
+  the available games listed here.
+</br>				
+<h3><span class="label label-default">Completed Projects</span></h3>
+<div>
 					<div class="panel-heading">
 						<table style="width:100%">
 							<tr>
 								<td class="title">Geo Wars</td>
-								<td class="gameIconCol"><img class="gameIcon" src="/resources/GeoWars.png" width="45px" height="45px"></td>
+								<td class="gameIconCol"><img class="gameIcon" src="{% static "imgs/geowars.png" %}" width="45px" height="45px"></td>
 							</tr>
 						</table>
 					</div>
@@ -66,7 +57,7 @@
 						<table style="width:100%">
 							<tr>
 								<td class="title">Labyrinth Crawl</td>
-								<td class="gameIconCol"><img class="gameIcon" src="/resources/LabyrinthCrawl.png" width="45px" height="45px"></td>
+								<td class="gameIconCol"><img class="gameIcon" src="{% static "imgs/LabyrinthCrawl.png" %}" width="45px" height="45px"></td>
 							</tr>
 						</table>
 					</div>
@@ -101,7 +92,7 @@
 						<table style="width:100%">
 							<tr>
 								<td class="title">Crazy Canal Tower Defense</td>
-								<td class="gameIconCol"><img style="background-color:black;" class="gameIcon" src="/resources/CrazyCanal.png" width="45px" height="45px"></td>
+								<td class="gameIconCol"><img style="background-color:black;" class="gameIcon" src="{% static "imgs/CrazyCanal.png" %}" width="45px" height="45px"></td>
 							</tr>
 						</table>
 					</div>
@@ -125,7 +116,7 @@
 						<table style="width:100%">
 							<tr>
 								<td class="title">Epic Crawl</td>
-								<td class="gameIconCol"><img style="background-color:black;" class="gameIcon" src="/resources/EpicCrawl.png" width="45px" height="45px"></td>
+								<td class="gameIconCol"><img style="background-color:black;" class="gameIcon" src="{% static "imgs/EpicCrawl.png" %}" width="45px" height="45px"></td>
 							</tr>
 						</table>
 					</div>
@@ -161,7 +152,7 @@
 						<table style="width:100%">
 							<tr>
 								<td class="title">Pirates</td>
-								<td class="gameIconCol"><img class="gameIcon" src="/resources/pirates.png" width="45px" height="45px"></td>
+								<td class="gameIconCol"><img class="gameIcon" src="{% static "imgs/pirates.png" %}" width="45px" height="45px"></td>
 							</tr>
 						</table>
 					</div>

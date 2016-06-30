@@ -1,0 +1,14 @@
+html, body {
+    background-attachment: fixed;
+    height: 100%;
+    margin: 0;
+}
+#wrap {
+    min-height: -webkit-calc(100% - 75px);
+    min-height: -moz-calc(100% - 75px);
+    min-height: calc(100% - 75px);
+}
+.footer {
+    position: relative;
+    clear: both;
+}

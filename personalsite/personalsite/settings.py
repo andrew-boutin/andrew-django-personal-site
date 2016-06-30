@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # My apps
+    'main',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -55,7 +58,7 @@ ROOT_URLCONF = 'personalsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -120,5 +123,34 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Static files have to be somewhere besides /static/
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'media'),
+)
+
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+
+# For security enhancements
+# Prevent browsers rom guessing content types to prevent users maliciously overriding it
+SECURE_CONTENT_TYPE_NOSNIFF = True
+
+# Block potential XXS attacks
+SECURE_BROWSER_XSS_FILTER = True
+
+# Protect CSRF token from client side JavaScript
+CSRF_COOKIE_HTTPONLY = True
+
+# Protect Copyright data from being used in an Iframe
+X_FRAME_OPTIONS = 'DENY'
+
+# Set up email specifications
+# Admins who should be emailed about site errors that occur
+ADMINS = (
+    ('Andrew Boutin', 'andrew.w.boutin@gmail.com'),
+)
+
+# People who get specific notifications like broken link emails
+MANAGERS = (
+    ('Andrew Boutin', 'andrew.w.boutin@gmail.com'),
+)
 

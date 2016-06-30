@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block header %}Andrew Boutin{% endblock %}
+
+{% block body_block %}
+  {% if debug %}
+  <b><font color="red">DEBUG MODE</font></b></br>
+  {% endif %}
+  <h2>Welcome</h2>
+  Hello! I'm Andrew Boutin, and this site is my on-line portfolio. If you'd like, check out my social media and development links in the footer section of my pages. Feel free to contact me about anything that you see here, and I hope you enjoy my site!</br></br>
+<h3>Site Info</h3>
+<a href="/gamedev/">Game Dev</a></br>
+I'm a hobbyist video game developer. This page lists games that are currently in development and some that are already completed.</br>
+</br>
+<a href="/pcbuild/">PC Build</a></br>
+I built my first computer a little while ago. Check out all of the info on this page.</br>
+</br>
+<a href="/keyboard/">Keyboard</a></br>
+I'm in the process of building a custom keyboard. Stay tuned!
+{% endblock %}

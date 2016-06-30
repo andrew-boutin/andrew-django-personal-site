@@ -1,0 +1,55 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}Andrew Boutin{% endblock %}</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Bootstrap optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static "css/base.css" %}" media=screen />
+  </head>
+
+  <body style="background-color:gray;">
+    <div id="wrap">
+      <nav class="navbar navbar-default navbar-inverse">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="/" style="padding-top:0px; padding-bottom:0px;"><img src="{% static "imgs/Profile.jpg" %}" style="height:50px;"/></a></li>
+              <li><a href="/gamedev/">Dev Projects</a></li>
+              <li><a href="/pcbuild/">Custom PC</a></li>
+              <li><a href="/keyboard/">Custom Keyboard</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div>
+        <div class="well">
+        {% block body_block %}Page under construction.{% endblock %}
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <nav class="nav navbar navbar-inverse">
+        <ul class="nav navbar-nav">
+          <li><a href="https://www.linkedin.com/in/andrewboutin" style="padding-top:0px; padding-bottom:0px;"><img src="{% static "imgs/linkedin.png" %}" style="height:50px;"/></a></li>
+          <li><p class="navbar-text">&middot;</p></li>
+          <li><a href="https://github.com/andrew-boutin" style="padding-top:0px; padding-bottom:0px;"><img src="{% static "imgs/github.png" %}" style="height:50px;"/></a></li>
+          <li><p class="navbar-text">&middot;</p></li>
+          <li><a href="http://stackoverflow.com/users/2459730/andrew-cs" style="padding-top:0px; padding-bottom:0px;"><img src="{% static "imgs/stackoverflow.png" %}" style="height:50px;"/></a></li>
+          <li><p class="navbar-text">&middot;</p></li>
+          <li><a href="https://plus.google.com/u/0/+AndrewBoutin/about" style="padding-top:0px; padding-bottom:0px;"><img src="{% static "imgs/googleplus.png" %}" style="height:50px;"/></a></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+
+  <!-- Bootstrap JavaScript/JQuery -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</html>

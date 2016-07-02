@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block body_block %}
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <table style="width:100%">
+      <tr>
+        <td class="title">Geo Wars Dev Info</td>
+        <td class="gameIconCol"><img class="gameIcon" src="/resources/GeoWars.png" width="45px" height="45px"></td>
+      </tr>
+    </table>
+  </div>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <strong>Technology:</strong></br>
+      This game was developed using the <a class="link" href="https://unity3d.com/">Unity Engine</a>
+      .  All coding was done in C# using 
+      <a class="link" href="http://monodevelop.com/">MonoDevelop</a> 
+      for an IDE.  All team communication 
+      was done over Skype and the Kongregate API was utilized to allow high scores to be saved and
+      linked to Kongregate user accounts.
+      <hr>
+      <strong>Dev. Team Structure:</strong></br>
+      There was only one other team member on this project who was in charge of game concepts/artwork.  
+      He came up with the game, how the mechanics worked, etc.  I was the only coder and built 
+      the entire game in the engine based on the requirements.
+      <hr>
+      <strong>My Role:</strong></br>
+      This was my first game developed using Unity and first team project via only on-line 
+      communication.  I was the only coder so I built the project from start to finish.  Some 
+      of the things required to do this included:
+      <ul>
+        <li>Physics simulation for player, enemies, and bullets</li>
+        <li>Collision detection</li>
+        <li>Weapon system</li>
+        <li>Artificial Intelligence (AI) for enemy decisions</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+{% endblock %}

@@ -4,71 +4,67 @@
 
 {% block body_block %}
 <h2><span class="label label-default">PC Build</span></h2>
-<script type="text/javascript">
-			window.onload = function(){
-				var i = 0;
-				var images = new Array();
-				// TODO: Missing a caption
-				var captions = ["All of the parts in their shiny new boxes.  Case, GPU, CPU, PSU, MOBO, HDD, SDD, RAM, optical drive, and aftermarket cooler.",
-								"Installing the CPU was a little nerve racking - it took a lot of force to clamp the level shut on the mother board.  I was worried it was going to break but it ended up snapping into place.", 
-								"The EVO 212 cooler is massive!  I had to take off the case's side-wall fan for it to fit properly.", 
-								"The 2.5 inch SSD had to be mounted to the bottom of the case which I didn't like very much.  It didn't leave enough room for the cables in order for the drive to be properly secured.",
-								"The GTX 970 GPU was also massive!  I really like the way the card looks in the case.",
-								"Nice looking PSU and especially like how the cable mesh wrap looks.",
-								"First look after mounting all of the components.",
-								"Another angle with all of the compnents in.  Nice quick release lever for holding in the optical drive - which reads Blue-Ray, R/W DVD, and R/W CD.",
-								"Starting working on cable management and figuring out how the front components hook up to the MOBO.",
-								"After installing all of the parts I went to try it out.  Every time I would attempt to power the PC on it would shut itself off after about 1/2 second.  Started trouble-shooting to see what the problem was.  Disconnected most of the parts to eliminate possibilites and originally thought it was the MOBO shorting out on the case.",
-								"Tried using a friend's PSU and it turns out that was the issue.  Ended up having Amazon send me a new one and I sent back the defective one.",
-								"Shot of after putting in the new PSU and reconnecting all of the parts.",
-								"This time the PC stayed on and worked perfectly.",
-								"Very happy with this build - cost, looks, and performance wise.  I'll probably make another build in a couple of years."];
-			
-			    var numImages = 14; //captions.length;
-			
-				for(var x = 0; x < numImages; x++)
-					images[x] = {% static "imgs/pc-" %} + (x + 1) + ".jpg";
-			
-				document.getElementById("leftarrow").onclick = function(){
-					var newIndex = (i == 0) ? (numImages - 1) : (i - 1);
-					swapImage(newIndex);
-				};
-			
-				document.getElementById("rightarrow").onclick = function(){
-					var newIndex = (i == (numImages - 1)) ? 0 : (i + 1);
-					swapImage(newIndex);
-				};
-			
-				function swapImage(newIndex){
-				    var img = document.getElementById("slide");
-					img.src = images[newIndex];
+</br>
+<div class="well outerInfo">
+  I recently built my first pc!  This was a big project for me since I started off not knowing very much about computer hardware.  Lots of research
+  was done before any purchases were made on how the different components work together.  I determined what I needed and wanted out of my build, created 
+  a parts list, collaborated on forums, purchased the parts, and then built the pc.  The entire process took roughly 2 months from start to finish 
+  and I'm extremely happy with the results.
+  </br>
+  </br>
 
-					var el = document.getElementById("mydiv");
-					el.innerHTML = captions[newIndex];
+  <div align="center">
+    <img name ="leftarrow" id="leftarrow" height=50 width=50 src="{% static "imgs/leftarrow.png" %}"/>
+    <img name="slide" id="slide" class="pcImage" height=350 width=400 src="{% static "imgs/pc-1.jpg" %}"/>
+    <img name ="rightarrow" id="rightarrow" height=50 width=50 src="{% static "imgs/rightarrow.png" %}"/>
+    <div id ="mydiv"></div>
+  </div>
+</div>
+<script>
+  window.onload = function(){
+    var i = 0;
+    var images = new Array();
+    var captions = ["All of the parts in their shiny new boxes.  Case, GPU, CPU, PSU, MOBO, HDD, SDD, RAM, optical drive, and aftermarket cooler.",
+                    "Installing the CPU was a little nerve racking - it took a lot of force to clamp the level shut on the mother board.  I was worried it was going to break but it ended up snapping into place.", 
+                    "The EVO 212 cooler is massive!  I had to take off the case's side-wall fan for it to fit properly.", 
+                    "The 2.5 inch SSD had to be mounted to the bottom of the case which I didn't like very much.  It didn't leave enough room for the cables in order for the drive to be properly secured.",
+                    "The GTX 970 GPU was also massive!  I really like the way the card looks in the case.",
+                   "Nice looking PSU and especially like how the cable mesh wrap looks.",
+                    "First look after mounting all of the components.",
+                    "Another angle with all of the compnents in.  Nice quick release lever for holding in the optical drive - which reads Blue-Ray, R/W DVD, and R/W CD.",
+                    "Starting working on cable management and figuring out how the front components hook up to the MOBO.",
+                    "After installing all of the parts I went to try it out.  Every time I would attempt to power the PC on it would shut itself off after about 1/2 second.  Started trouble-shooting to see what the problem was.  Disconnected most of the parts to eliminate possibilites and originally thought it was the MOBO shorting out on the case.",
+                    "Tried using a friend's PSU and it turns out that was the issue.  Ended up having Amazon send me a new one and I sent back the defective one.",
+                    "Shot of after putting in the new PSU and reconnecting all of the parts.",
+                    "This time the PC stayed on and worked perfectly.",
+                    "Very happy with this build - cost, looks, and performance wise.  I'll probably make another build in a couple of years."];
 
-					i = newIndex;
-				}
+    var numImages = 14; //captions.length;
+
+    for(var x = 0; x < numImages; x++)
+      images[x] = "{% static "imgs/pc-" %}" + (x + 1) + ".jpg";
+
+    document.getElementById("leftarrow").onclick = function(){
+      var newIndex = (i == 0) ? (numImages - 1) : (i - 1);
+      swapImage(newIndex);
+    };
+
+    document.getElementById("rightarrow").onclick = function(){
+      var newIndex = (i == (numImages - 1)) ? 0 : (i + 1);
+      swapImage(newIndex);
+    };
+
+    function swapImage(newIndex){
+      var img = document.getElementById("slide");
+      img.src = images[newIndex];
+
+      var el = document.getElementById("mydiv");
+      el.innerHTML = captions[newIndex];
+
+      i = newIndex;
+    }
 			
-				swapImage(0);
-			}
-		</script>
-				</br>
-				<div class="well outerInfo">
-					<p>
-						I recently built my first pc!  This was a big project for me since I started off not knowing very much about computer hardware.  Lots of research
-						was done before any purchases were made on how the different components work together.  I determined what I needed and wanted out of my build, created 
-						a parts list, collaborated on forums, purchased the parts, and then built the pc.  The entire process took roughly 2 months from start to finish 
-						and I'm extremely happy with the results.
-						</br>
-						</br>
-						
-						<div align="center">
-							<img name ="leftarrow" id="leftarrow" height=50 width=50 src="{% static "imgs/leftarrow.png" %}"/>
-							<img name="slide" id="slide" class="pcImage" height=350 width=400 src="{% static "imgs/pc-1.jpg" %}"/>
-							<img name ="rightarrow" id="rightarrow" height=50 width=50 src="{% static "imgs/rightarrow.png" %}"/>
-							<div id ="mydiv"></div>
-						</div>
-					</p>
-				</div>
-
+    swapImage(0);
+  };
+</script>
 {% endblock %}

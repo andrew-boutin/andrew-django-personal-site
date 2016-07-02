@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block body_block %}
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <table style="width:100%">
+      <tr>
+        <td class="title">Epic Crawl Dev Info</td>
+        <td class="gameIconCol"><img class="gameIcon" src="/resources/EpicCrawl.png" width="45px" height="45px"></td>
+      </tr>
+    </table>
+  </div>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <strong>Technology:</strong></br>
+      This game was developed in Java.  The IDE used to code in and create the executable .jar file 
+      was <a class="link" href="https://www.eclipse.org/">Eclipse</a>.  
+      All images for the game were created using <a class="link" href="http://pyxeledit.com/">Pyxel Edit</a>.
+      <hr>
+      <strong>Info:</strong></br>
+      All of the artwork was created by a separate person for this game.  Some of the artwork was specified 
+      by me, but most of it was thought up by the other person.
+      </br></br>
+      The coolest feature of this game to me is the level designer that I built.  It allows me to choose 
+      game objects and place them onto the map, edit the map, save levels, load levels, etc.  A nice feature 
+      of the level designer is being able to create doors/portals where you can specify other levels to load 
+      and locations on the map where the player goes to when they go through them.  I plan on making the 
+      level designer available during game play so players can create and play their own levels.  The enemy 
+      AI is another cool aspect of the game.  It uses a breadth first search algorithm to find the 
+      shortest path possible to the player.  
+    </li>
+  </ul>
+</div>
+{% endblock %}

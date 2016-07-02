@@ -17,6 +17,26 @@ def gamedev(request):
     return render(request, 'main/gamedev.html')
 
 
+def pirates(request):
+    """Page for pirates game."""
+    return render(request, 'main/pirates.html')
+
+
+def labyrinthcrawl(request):
+    """Page for labyrinth crawl game."""
+    return render(request, 'main/labyrinthcrawl.html')
+
+
+def epiccrawl(request):
+    """Page for Epic Crawl game."""
+    return render(request, 'main/epiccrawl.html')
+
+
+def geowars(request):
+    """Page for Geo Wars game."""
+    return render(request, 'main/geowars.html')
+
+
 def keyboard(request):
     """Page for keyboard custom build."""
     return render(request, 'main/keyboard.html')

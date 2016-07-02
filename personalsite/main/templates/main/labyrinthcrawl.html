@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block body_block %}
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <table style="width:100%">
+      <tr>
+        <td class="title">Labyrinth Crawl Dev Info</td>
+	<td class="gameIconCol"><img class="gameIcon" src="/resources/LabyrinthCrawl.png" width="45px" height="45px"></td>
+      </tr>
+    </table>
+  </div>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <strong>Technology:</strong></br>
+      This game was developed in C++ using 
+      <a class="link" href="http://www.codeblocks.org/">CodeBlocks</a> as an IDE.  
+      It's played entirely in a terminal.
+      <hr>
+      <strong>Info:</strong></br>
+      This was a solo project, and it was one of the first games that I ever created.  It's 
+      a fun and simple game that can be addicting when you want to get to a further level.  I developed this 
+      game to re-learn the basics of C++ before I started a job as a programming intern.  I've only beaten 
+      this game once after many tries so if you win email me a screenshot!
+      </br></br>
+      I used an object-oriented design for this game to handle maze objects.  The most interesting part of this 
+      game to me was developing an algorithm to randomly generate the mazes.  At the start of each level the 
+      "maze" is completely filled with walls.  The algorithm picks a random starting location on one side of 
+      the maze and begins to hollow out the walls.  It uses a depth-first approach and doesn't take out the 
+      walls if there is an empty space adjacent.  When it can't go further, it retraces its steps and finds all 
+      other paths to hollow out.  After, the stairs are randomly placed on the opposite side of the maze in comparison 
+      to the starting point.  A few random walls are taken out afterwards to make more possible turns.
+    </li>
+  </ul>
+</div>
+{% endblock %}

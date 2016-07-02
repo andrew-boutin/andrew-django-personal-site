@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block body_block %}
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <table style="width:100%">
+      <tr>
+        <td class="title">Pirates Dev Info</td>
+        <td class="gameIconCol"><img class="gameIcon" src="/resources/pirates.png" width="45px" height="45px"></td>
+      </tr>
+    </table>
+  </div>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <strong>Technology:</strong></br>
+      This game was developed using the <a class="link" href="https://unity3d.com/">Unity Engine</a>.  
+      All coding/scripting was in C# using 
+      <a class="link" href="http://monodevelop.com/">MonoDevelop</a> 
+      for an IDE, and  
+      <a class="link" href="http://developer.muchdifferent.com/unitypark/uLink/uLink">uLink</a> 
+      was used for all of the networking.
+      <hr>
+      <strong>Dev. Team Structure:</strong></br>
+      When I was working on this project there were four coders including myself and four 3D artists.
+      One of the artists was also the lead developer who took care of all social media, recruiting, and 
+      game concepts.  A lot of game mechanics were decided as a group when the issues came up.  
+      Skype was utilized for all communication and an SVN repository was hosted for the project builds.
+      <hr>
+      <strong>My Role:</strong></br>
+      I was a member from January to September 2014.  I was brought on to the team after applying to be
+      a coder and creating a demo project.  Here are some of my main contributions:
+      <ul>
+        <li>Mecanim layer to handle combat animation transitions</li>
+        <li>Weapon "class" system - weapon | rangedWeapon, meleeWeapon | basic weapon scripts</li>
+        <li>Generic weapon, melee, and ranged management scripts</li>
+        <li>Raycasting, hit detection, sound, and particle systems for ranged weapons</li>
+        <li>Skeleton mask to control/combine combat vs movement animations</li>
+        <li>Assisted with networking to display combat animations across all clients</li>
+        <li>Assisted with architecture design for the multiple game servers</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+{% endblock %}

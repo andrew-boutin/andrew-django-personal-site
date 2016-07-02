@@ -2,13 +2,19 @@
 
 {% load staticfiles %}
 
+{% block title %}
+Pirates
+{% endblock %}
+
+{% block header %}Pirates{% endblock %}
+
 {% block body_block %}
 <div class="panel panel-default">
   <div class="panel-heading">
     <table style="width:100%">
       <tr>
         <td class="title">Pirates Dev Info</td>
-        <td class="gameIconCol"><img class="gameIcon" src="/resources/pirates.png" width="45px" height="45px"></td>
+        <td class="gameIconCol"><img class="gameIcon" src="{% static "imgs/pirates.png" %}" width="45px" height="45px"></td>
       </tr>
     </table>
   </div>

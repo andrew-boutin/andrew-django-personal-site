@@ -2,13 +2,19 @@
 
 {% load staticfiles %}
 
+{% block title %}
+Epic Crawl
+{% endblock %}
+
+{% block header %}Epic Crawl{% endblock %}
+
 {% block body_block %}
 <div class="panel panel-default">
   <div class="panel-heading">
     <table style="width:100%">
       <tr>
         <td class="title">Epic Crawl Dev Info</td>
-        <td class="gameIconCol"><img class="gameIcon" src="/resources/EpicCrawl.png" width="45px" height="45px"></td>
+        <td class="gameIconCol"><img class="gameIcon" src="{% static "imgs/EpicCrawl.png" %}" width="45px" height="45px"></td>
       </tr>
     </table>
   </div>

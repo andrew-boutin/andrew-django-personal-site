@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>{% block title %}Andrew Boutin{% endblock %}</title>
+    <title>AB - {% block title %}Andrew Boutin{% endblock %}</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!-- Bootstrap optional theme -->
@@ -31,7 +31,8 @@
       </nav>
       <div>
         <div class="well">
-        {% block body_block %}Page under construction.{% endblock %}
+          <h2><span class="label label-default">{% block header %}Andrew Boutin{% endblock%}</span></h2>
+          {% block body_block %}Page under construction.{% endblock %}
         </div>
       </div>
     </div>
@@ -41,6 +42,7 @@
         <ul class="nav navbar-nav">
           <li><a href="https://www.linkedin.com/in/andrewboutin" style="padding-top:0px; padding-bottom:0px;"><img src="{% static "imgs/linkedin.png" %}" style="height:50px;"/></a></li>
           <li><p class="navbar-text">&middot;</p></li>
+
           <li><a href="https://github.com/andrew-boutin" style="padding-top:0px; padding-bottom:0px;"><img src="{% static "imgs/github.png" %}" style="height:50px;"/></a></li>
           <li><p class="navbar-text">&middot;</p></li>
           <li><a href="http://stackoverflow.com/users/2459730/andrew-cs" style="padding-top:0px; padding-bottom:0px;"><img src="{% static "imgs/stackoverflow.png" %}" style="height:50px;"/></a></li>

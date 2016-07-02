@@ -2,13 +2,19 @@
 
 {% load staticfiles %}
 
+{% block title %}
+Geo Wars
+{% endblock %}
+
+{% block header %}Geo Wars{% endblock %}
+
 {% block body_block %}
 <div class="panel panel-default">
   <div class="panel-heading">
     <table style="width:100%">
       <tr>
         <td class="title">Geo Wars Dev Info</td>
-        <td class="gameIconCol"><img class="gameIcon" src="/resources/GeoWars.png" width="45px" height="45px"></td>
+        <td class="gameIconCol"><img class="gameIcon" src="{% static "imgs/geowars.png" %}" width="45px" height="45px"></td>
       </tr>
     </table>
   </div>

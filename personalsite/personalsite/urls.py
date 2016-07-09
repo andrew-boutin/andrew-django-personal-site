@@ -3,6 +3,7 @@ from django.conf.urls import url, include, handler400, handler403, handler404, h
 from django.contrib import admin
 from django.views.generic.base import TemplateView
 from django.conf import settings
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     url(r'^', include('main.urls')),

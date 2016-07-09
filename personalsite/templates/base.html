@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="{% static "css/base.css" %}" media=screen />
+    <link rel="shortcut icon" href="{% static "imgs/profile.ico" %}">
   </head>
 
   <body style="background-color:gray;">
@@ -32,7 +33,7 @@
       <div>
         <div class="well">
           <h2><span class="label label-default">{% block header %}Andrew Boutin{% endblock%}</span></h2>
-          {% block body_block %}Page under construction.{% endblock %}
+          {% block body %}Page under construction.{% endblock %}
         </div>
       </div>
     </div>

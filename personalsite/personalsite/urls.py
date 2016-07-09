@@ -1,23 +1,31 @@
-"""personalsite URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/1.9/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  url(r'^$', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  url(r'^$', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.conf.urls import url, include
-    2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
-"""
-from django.conf.urls import url, include
+"""Site's main url routing point - route to the appropriate app views."""
+from django.conf.urls import url, include, handler400, handler403, handler404, handler500
 from django.contrib import admin
+from django.views.generic.base import TemplateView
+from django.conf import settings
 
 urlpatterns = [
     url(r'^', include('main.urls')),
     url(r'^admin/', admin.site.urls),
 ]
+
+# Override Django's default error pages and re-wire to custom views
+site_view = 'personalsite.views.'
+
+handler400 = site_view + 'bad_request'
+handler403 = site_view + 'permission_denied'
+handler404 = site_view + 'page_not_found'
+handler500 = site_view + 'error'
+
+if settings.DEBUG:
+    # Wire up views to serve static files easily while developing
+    urlpatterns += staticfiles_urlpatterns()
+
+    # Allows the custom error pages to be viewed while developing
+    urlpatterns += [
+        url(r'^400/$', TemplateView.as_view(template_name='400.html')),
+        url(r'^403/$', TemplateView.as_view(template_name='403.html')),
+        url(r'^404/$', TemplateView.as_view(template_name='404.html')),
+        url(r'^500/$', TemplateView.as_view(template_name='500.html')),
+    ]
 

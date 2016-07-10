@@ -7,14 +7,39 @@ Dev Projects
 {% block header %}Software Development Projects{% endblock %}
 
 {% block body %}
-Here's some info on the dev projects that I've worked on.</br>
-</br>
-Personal Site</br>
-I made this site using Django!</br>
-</br>
-Multi Sound</br>
-Android sound board app!</br>
-</br>
-Time Splitter</br>
-Android time per task logging app!
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <strong>Personal Site</strong>
+  </div>
+    <ul class="list-group">
+      <li class="list-group-item">
+        I created this website using Django for the web framework. 
+        NGINX and uWSGI make up the rest of the stack, and it's hosted on a Digital Ocean droplet. 
+        It used to be a static HTML site, but I wanted the option to have dynamic pages and content in the future.
+      </li>
+  </ul>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <strong>Multi Sound</strong>
+  </div>
+    <ul class="list-group">
+      <li class="list-group-item">
+        I'm working on a sound board Android app.
+        It lets users easily play sound clips and can create widgets to play designated sounds without even opening the app.
+      </li>
+  </ul>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <strong>Time Splitter</strong>
+  </div>
+    <ul class="list-group">
+      <li class="list-group-item">
+        This is another Android app that I was working on with a group of people for fun.
+        It allows project based time logging so users can easily track how much time they're spending working on various projects with ease.
+        I split my time on this project between developing the app and teaching other team members how Android apps work, how to utilize GIT, and how Trello works for task management.
+      </li>
+  </ul>
+</div>
 {% endblock %}

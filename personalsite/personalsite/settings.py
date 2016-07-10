@@ -17,7 +17,7 @@ else:
     DEBUG = True
     SECRET_KEY = 'wvnp@@jq+(@(+e!x6^kfv^=^xwmdr4+lp$=m@3#(9_sa^@2_a9'
 
-ALLOWED_HOSTS = ['45.55.204.169']
+ALLOWED_HOSTS = ['andrewboutin.com', 'www.andrewboutin.com']
 
 # Application definition
 
@@ -121,6 +121,12 @@ CSRF_COOKIE_HTTPONLY = True
 
 # Protect Copyright data from being used in an Iframe
 X_FRAME_OPTIONS = 'DENY'
+
+# Prevent sessions on insecure requests
+SESSION_COOKIE_SECURE = True
+
+# Ensure CSRF cookie is only sent on secure connections
+CSRF_COOKIE_SECURE = True
 
 # Admins who should be emailed about site errors that occur
 ADMINS = (

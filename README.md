@@ -7,6 +7,8 @@ Hosted on a [Digital Ocean](https://www.digitalocean.com/) droplet.
 
 Utilizes [Bootstrap](http://getbootstrap.com/) to enhance HTML, CSS, and JavaScript on the site.
 
+---
+
 ###### Author
 
 Andy Boutin

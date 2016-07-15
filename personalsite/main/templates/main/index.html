@@ -5,9 +5,10 @@
 {% block header %}Welcome{% endblock %}
 
 {% block body %}
-  {% if debug %}
-  <b><font color="red">DEBUG MODE</font></b></br>
-  {% endif %}
+{% if debug %}
+<b><font color="red">DEBUG MODE</font></b></br>
+{% endif %}
+<div class="well" style="background: white;">
   <a href="/devprojects/">Dev Projects</a></br>
   I'm always working on some sort of software development project and put up info on them here.</br>
   </br>
@@ -19,4 +20,5 @@
   </br>
   <a href="/keyboard/">Custom Keyboard</a></br>
   I'm in the process of building a custom keyboard. Check out my progress here.
+</div>
 {% endblock %}

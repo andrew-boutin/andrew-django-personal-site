@@ -17,6 +17,11 @@ def gamedev(request):
     return render(request, 'main/gamedev.html')
 
 
+def squares(request):
+    """Page for Squares 2 clone."""
+    return render(request, 'main/squares.html')
+
+
 def pirates(request):
     """Page for pirates game."""
     return render(request, 'main/pirates.html')

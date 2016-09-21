@@ -19,7 +19,9 @@ urlpatterns = [
     # /gamedev/epiccrawl/
     url(r'^gamedev/epiccrawl/$', views.epiccrawl, name='epiccrawl'),
     # /gamedev/geowars/
-    url(r'^gamedev/geowars/$', views.geowars,name='geowars'),
+    url(r'^gamedev/geowars/$', views.geowars, name='geowars'),
+    # /gamedev/squares/
+    url(r'^gamedev/squares/$', views.squares, name='squares'),
     # /keyboard/
     url(r'^keyboard/$', views.keyboard, name='keyboard'),
 ]

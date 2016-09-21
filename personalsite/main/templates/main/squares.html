@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}
+Squares Clone
+{% endblock %}
+
+{% block header %}Squares Clone{% endblock %}
+
+{% block body %}
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <table style="width:100%">
+      <tr>
+        <td class="title">Squares Clone Dev Info</td>
+        <td class="gameIconCol"><img class="gameIcon" src="{% static "imgs/squares.png" %}" width="45px" height="45px"></td>
+      </tr>
+    </table>
+  </div>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <strong>Technology:</strong></br>
+      This game was developed in Python utilizing <a class="link" href="http://pygame.org/hifi.html">Pygame</a>. The whole point of creating this game was to try
+      out using Pygame for game development.
+      <hr>
+      <strong>Info:</strong></br>
+      The game play and mechanics are very simple. On top of that Pygame provides lots of built in functionality to
+      make game development easier. It handles almost all of the collision detection and graphics rendering. I highly
+      recommend Pygame to developers who want to be able to rapidly develop games without spending time on the UI.
+    </li>
+  </ul>
+</div>
+{% endblock %}

@@ -1,4 +1,6 @@
-# My Personal Site
+# Personal Site Django
+
+This used to be active as my personal site.
 
 Powered by [Django](https://www.djangoproject.com/) - a high-level Python Web framework.
 Uses [NGINX](https://www.nginx.com/resources/wiki/) for HTTP server & reverse proxy.
@@ -9,7 +11,4 @@ Utilizes [Bootstrap](http://getbootstrap.com/) to enhance HTML, CSS, and JavaScr
 
 ---
 
-###### Author
-
-Andy Boutin
-www.andrewboutin.com
+Check out my [personal site](https://andrewboutin.com)!
